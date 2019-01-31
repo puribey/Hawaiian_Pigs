@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import pigData from './wild-pig-data.json'
 import './App.css'
-import Button from '@material-ui/core/Button'
-import Icon from '@material-ui/core/Icon'
+import Button from './components/Button/Button'
 
 class App extends Component {
   render() {
@@ -11,12 +10,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button variant="outlined" color="primary">
-          <Icon>play_arrow</Icon>
-        </Button>
-        <Button variant="outlined" color="secondary">
-          <Icon>pause</Icon>
-        </Button>
+        <Button variant="outlined" color="primary" icon="play_arrow" text="play"/>
         <table>
           <tbody>
             <tr>
