@@ -1,8 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
+import { withStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import './statics/styles.css'
+
+const styles = {
+  bar: {
+    height: 8,
+    width: '100%'
+  }
+}
 
 class ProgressBar extends React.Component {
   state = {
@@ -28,22 +36,23 @@ class ProgressBar extends React.Component {
   }
 
   render() {
-    const { color, variant, className } = this.props
+    const { classes, color, variant, className } = this.props
     return (
       <LinearProgress
         color={color}
         variant={variant}
         value={this.state.completed}
-        className={cn('bar', className)}
+        className={cn(classes.bar, className)}
       />
     )
   }
 }
 
 ProgressBar.propTypes = {
+  classes: PropTypes.object.isRequired,
   color: PropTypes.string,
   variant: PropTypes.string,
   className: PropTypes.string
 }
 
-export default ProgressBar
+export default withStyles(styles)(ProgressBar)
