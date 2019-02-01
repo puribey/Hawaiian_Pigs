@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import pigData from './wild-pig-data.json'
 import './App.css'
 import Button from './components/Button/Button'
+import ProgressBar from './components/ProgressBar/ProgressBar'
 
 class App extends Component {
   render() {
@@ -10,7 +11,11 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button variant="outlined" color="primary" icon="play_arrow" text="play"/>
+        <div>
+          <Button variant="outlined" color="primary" icon="play_arrow" text="play"/>
+          <ProgressBar variant="determinate" color="secondary"/>
+          <Button color="primary" icon="refresh"/>
+        </div>
         <table>
           <tbody>
             <tr>
