@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
 import Icon from '@material-ui/core/Icon'
 
@@ -15,6 +16,15 @@ const MaterialButton = props => {
       {icon && <Icon>{icon}</Icon>}
     </Button>
   )
+}
+
+MaterialButton.propTypes = {
+  color: PropTypes.string,
+  variant: PropTypes.string,
+  text: PropTypes.string,
+  icon: PropTypes.string,
+  onClick: PropTypes.func,
+  className: PropTypes.string
 }
 
 export default MaterialButton
