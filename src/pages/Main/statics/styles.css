@@ -20,11 +20,13 @@
   width: 100%;
   max-width: 1024px;
   background-color: #ffffff;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 2;
+  padding: 40px 20px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
     0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 2px;
-  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
