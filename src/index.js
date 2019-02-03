@@ -6,6 +6,10 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core'
 import { deepPurple, teal } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: ['Roboto', 'Arial', 'sans-serif'].join(','),
+    useNextVariants: true
+  },
   palette: {
     primary: {
       light: deepPurple[100],
