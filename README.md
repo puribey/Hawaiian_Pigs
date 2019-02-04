@@ -24,6 +24,7 @@ For example, `http://localhost:3000/?paused=true&year=2002`
 
 **Further improvements:**
 - [ ] Make *BarChart* component more reusable: now this is too custom made.
+- [ ] Improve router when using buttons, it would be nice for each button to change routing
 
 ---
 
