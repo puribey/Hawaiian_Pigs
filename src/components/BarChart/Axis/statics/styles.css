@@ -4,8 +4,9 @@
 }
 
 .axis text {
-  font-size: 11px;
+  font-size: 16px;
   fill: black;
+  font-weight: 500;
 }
 
 .axis-Bottom text {

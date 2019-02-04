@@ -1,4 +1,4 @@
-.chart-actions {
+.chart-actions-progress {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 5% 5% 5% 5% 80%;
@@ -7,4 +7,11 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.chart-actions-years {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
 }

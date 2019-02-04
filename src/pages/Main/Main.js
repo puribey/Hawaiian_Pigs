@@ -9,7 +9,7 @@ const Main = props => {
       <div className="main-info">
         <div className="main-header">
           <h1>Hawaiian Pig Visualization</h1>
-          <p>Coded by PuribBey</p>
+          <p>By PuriBey</p>
         </div>
         <div>
         <BarChart {...props}/>

@@ -20,7 +20,7 @@ export default class Axis extends Component {
       .scale(this.props.scale)
       .tickSize(-this.props.tickSize)
       .tickPadding([12])
-      .ticks([5])
+      .ticks([8])
 
     d3Select(this.axisElement).call(axis)
   }
@@ -29,7 +29,7 @@ export default class Axis extends Component {
     return (
       <g
         className={`axis axis-${this.props.orient}`}
-        ref={(el) => {
+        ref={el => {
           this.axisElement = el
         }}
         transform={this.props.translate}
@@ -42,5 +42,5 @@ Axis.propTypes = {
   scale: PropTypes.func,
   orient: PropTypes.string,
   tickSize: PropTypes.number,
-  translate: PropTypes.string,
+  translate: PropTypes.string
 }

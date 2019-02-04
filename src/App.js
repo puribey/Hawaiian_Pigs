@@ -4,7 +4,7 @@ import Main from './pages/Main/Main'
 
 const App = () => (
   <Router>
-    <Route component={Main} />
+    <Route path="/:paused?:year?" component={Main} />
   </Router>
 )
 
