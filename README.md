@@ -37,6 +37,7 @@ Main dependencies:
 * [D3js](https://d3js.org/)
 * [Material UI](https://material-ui.com/)
 * [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+* [Query String](https://www.npmjs.com/package/query-string)
 * [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
 ---
