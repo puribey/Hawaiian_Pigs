@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { scaleBand, scaleLinear } from 'd3-scale'
 import * as queryString from 'query-string'
 
+import ResponsiveWrapper from './ResponsiveWrapper/ResponsiveWrapper'
 import Axes from './Axes/Axes'
 import Bars from './Bars/Bars'
 import Button from '../Button/Button'
@@ -100,9 +101,11 @@ class BarChart extends Component {
   }
 
   render() {
+    const {parentWidth} = this.props
     const { isPaused, progress, yearFrom, listOfYears } = this.state
+
     const margins = { top: 80, right: 20, bottom: 100, left: 60 }
-    const svgDimensions = { width: 800, height: 500 }
+    const svgDimensions = { width: parentWidth, height: 500 }
 
     // filter years and set it equal to the year which is now selected
     const maxValue = Math.max(...this.data.filter(item => item.year === yearFrom).map(d => d.pigPopulation)) + 1000
@@ -139,7 +142,7 @@ class BarChart extends Component {
             {isPaused && <Button variant="outlined" color="primary" icon="play_arrow" onClick={this.handleActionClick} />}
             {!isPaused && <Button variant="outlined" color="secondary" icon="paused" onClick={this.handleActionClick} />}
             <Button variant="outlined" icon="refresh" onClick={this.handleReset}/>
-            <ProgressBar progress={progress} variant="determinate" color="secondary"/>
+            <ProgressBar progress={progress} variant="determinate" color="secondary" className="progress-bar"/>
           </div>
           <div className="chart-actions-years">
             {listOfYears.map((item, i) => (
@@ -156,4 +159,4 @@ BarChart.propTypes = {
   parentWidth: PropTypes.string,
 }
 
-export default BarChart
+export default ResponsiveWrapper(BarChart)
