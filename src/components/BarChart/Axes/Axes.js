@@ -19,7 +19,6 @@ const Axes = (props) => {
     translate: `translate(${margins.left}, 0)`,
     tickSize: width - margins.left - margins.right,
   }
-  console.log(yProps)
 
   return (
     <g>
