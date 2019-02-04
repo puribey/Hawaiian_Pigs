@@ -42,7 +42,6 @@ class BarChart extends Component {
     const yearFrom = 2000
 
     const progress = this.calculateStartPoint(yearFrom) // calculate where to start in %
-    console.log('progress', progress)
 
     const isPaused = false
 
@@ -67,7 +66,6 @@ class BarChart extends Component {
 
   handleReset = () => {
     const {percentPerYear, minYear} = this.state
-    console.log(minYear)
     this.setState({
       yearFrom: minYear,
       progress: percentPerYear
